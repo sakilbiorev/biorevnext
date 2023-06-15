@@ -20,6 +20,7 @@ const MainMenu = () => {
             className="border-none text-white-0 font-titillium uppercase flex h-[100%] items-center"
           >
             Home
+            <span className='absolute h-2 w-2 bottom-[-14px] left-[50%] opacity-0 ml-[-5px] rotate-45'></span>
           </Link>
         </li>
         <li className="mx-5 relative flex h-[100%]">
