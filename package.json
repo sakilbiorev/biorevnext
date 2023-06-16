@@ -120,5 +120,16 @@
       "@semantic-release/github"
     ]
   },
-  "author": "Ixartz (https://github.com/ixartz)"
+  "author": "Ixartz (https://github.com/ixartz)",
+  "description": "You can run locally in development mode with live reload:",
+  "main": "commitlint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakilbiorev/biorevnext.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakilbiorev/biorevnext/issues"
+  },
+  "homepage": "https://github.com/sakilbiorev/biorevnext#readme"
 }
