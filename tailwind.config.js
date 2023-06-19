@@ -15,6 +15,9 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      boxShadow: {
+        'mainMenu': '3px 3px 15px 0 rgba(0, 0, 0, 0.1)'
+      },
       fontFamily: {
         'titillium': ['Titillium Web', 'sans-serif'],
         'Flaticon': ['Flaticon']
