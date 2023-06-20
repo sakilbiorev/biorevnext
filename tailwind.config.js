@@ -16,11 +16,11 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        'mainMenu': '3px 3px 15px 0 rgba(0, 0, 0, 0.1)'
+        mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
       },
       fontFamily: {
-        'titillium': ['Titillium Web', 'sans-serif'],
-        'Flaticon': ['Flaticon']
+        titillium: ['Titillium Web', 'sans-serif'],
+        Flaticon: ['Flaticon'],
       },
       colors: {
         white: {
@@ -28,10 +28,10 @@ module.exports = {
           100: '#FFFFFF17',
         },
         black: {
-          0 : '#2a2a2a'
+          0: '#2a2a2a',
         },
         gray: {
-          0: "#B6B6B6",
+          0: '#B6B6B6',
           100: '#f7fafc',
           200: '#edf2f7',
           300: '#e2e8f0',
