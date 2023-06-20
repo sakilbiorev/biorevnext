@@ -19,6 +19,7 @@ module.exports = {
         mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
       },
       fontFamily: {
+        raleway:['Raleway', 'sans-serif'],
         titillium: ['Titillium Web', 'sans-serif'],
         Flaticon: ['Flaticon'],
       },
@@ -26,6 +27,7 @@ module.exports = {
         white: {
           0: '#ffffff',
           100: '#FFFFFF17',
+          200: '#A3A3A3',
         },
         black: {
           0: '#2a2a2a',
