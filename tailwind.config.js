@@ -2,22 +2,6 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    borderWidth: {
-      DEFAULT: '1px',
-      '0': '0px',
-      '0.5': '0.5px',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-    },
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -31,22 +15,23 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      boxShadow: {
+        mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
+      },
       fontFamily: {
-        'titillium': ['Titillium Web', 'sans-serif'],
-        'Flaticon': ['Flaticon']
+        titillium: ['Titillium Web', 'sans-serif'],
+        Flaticon: ['Flaticon'],
       },
       colors: {
         white: {
           0: '#ffffff',
           100: '#FFFFFF17',
-          200: '#A3A3A3',
         },
         black: {
-          0 : '#2a2a2a'
+          0: '#2a2a2a',
         },
-        
         gray: {
-          0: "#B6B6B6",
+          0: '#B6B6B6',
           100: '#f7fafc',
           200: '#edf2f7',
           300: '#e2e8f0',
