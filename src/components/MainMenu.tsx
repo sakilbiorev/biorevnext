@@ -113,7 +113,6 @@ const MainMenu = () => {
       </ul>
     </nav>
     <div className='w-[5%]'>
-      
     </div>
   </header>
   )
