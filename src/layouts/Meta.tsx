@@ -46,9 +46,14 @@ const Meta = (props: IMetaProps) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
-        <link rel='dns-prefetch' href='//www.google.com' />
-        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CTitillium+Web%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C900%7CJosefin+Sans%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+        <link rel="dns-prefetch" href="//www.google.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CTitillium+Web%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C900%7CJosefin+Sans%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i&#038;subset=latin%2Clatin-ext&display=optional"
+          type="text/css"
+          media="all"
+        />
       </Head>
       <NextSeo
         title={props.title}
