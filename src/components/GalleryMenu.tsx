@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import router from 'next/router';
 
 const GalleryMenu = () => {
   return (
@@ -13,7 +12,7 @@ const GalleryMenu = () => {
             <Link href="/">
               <img
                 className="h-[72px] w-auto"
-                src={`${router.basePath}/assets/images/biorev-white-logo.svg`}
+                src="/assets/images/biorev-white-logo.svg"
                 alt="Biorev logo"
               />
             </Link>
