@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 
-import Footer from '@/components/Footer';
+import GalleryMenu from '@/components/GalleryMenu';
 import MainMenu from '@/components/MainMenu';
+import Footer from '@/layouts/Footer';
 import type { MenuItem } from '@/libs/interfaces';
 
 type IMainProps = {
@@ -144,6 +145,7 @@ const Main = (props: IMainProps) => (
         <main className="content text-xl">{props.children}</main>
       </div>
     </div>
+    <GalleryMenu />
     <Footer />
   </>
 );
