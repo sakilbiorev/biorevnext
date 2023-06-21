@@ -25,6 +25,7 @@ module.exports = {
         titillium: ['Titillium Web', 'sans-serif'],
         Flaticon: ['Flaticon'],
         raleway: ['Raleway', 'sans-serif'],
+        josefin: ['Josefin Sans', 'sans-serif'],
       },
       colors: {
         white: {
@@ -34,6 +35,8 @@ module.exports = {
         black: {
           0: '#2a2a2a',
           1: '#2f2f2f',
+          2: '#555555',
+          3: '#1a1a1a',
           overlay: 'rgba(0, 0, 0, 0.7)',
         },
         gray: {
@@ -58,6 +61,9 @@ module.exports = {
           700: '#2b6cb0',
           800: '#2c5282',
           900: '#2a4365',
+        },
+        orange: {
+          0: '#EA831A',
         },
       },
     },

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 
+import TitleAndDescriptionSection from '@/components/TitleAndDescriptionSection';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -21,6 +22,8 @@ const Index = () => {
           alt="Banner"
         />
       </div>
+
+      <TitleAndDescriptionSection />
     </Main>
   );
 };

@@ -26,7 +26,7 @@ class MyDocument extends Document {
             media="all"
           />
         </Head>
-        <body>
+        <body className="font-raleway text-base font-normal leading-[1.875] text-black-2">
           <Main />
           <NextScript />
         </body>

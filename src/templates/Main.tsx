@@ -142,7 +142,7 @@ const Main = (props: IMainProps) => (
       {props.meta}
 
       <div className="mx-auto">
-        <main className="content text-xl">{props.children}</main>
+        <main className="content">{props.children}</main>
       </div>
     </div>
     <GalleryMenu />
