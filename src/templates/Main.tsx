@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 
+import GalleryMenu from '@/components/GalleryMenu';
 import MainMenu from '@/components/MainMenu';
 import type { MenuItem } from '@/libs/interfaces';
 
@@ -153,6 +154,7 @@ const Main = (props: IMainProps) => (
         </footer>
       </div>
     </div>
+    <GalleryMenu />
   </>
 );
 

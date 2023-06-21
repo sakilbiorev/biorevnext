@@ -15,6 +15,9 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      cursor: {
+        close: 'url(/assets/images/close.png) 16 16, default',
+      },
       boxShadow: {
         mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
       },
@@ -29,6 +32,8 @@ module.exports = {
         },
         black: {
           0: '#2a2a2a',
+          1: '#2f2f2f',
+          overlay: 'rgba(0, 0, 0, 0.7)',
         },
         gray: {
           0: '#B6B6B6',

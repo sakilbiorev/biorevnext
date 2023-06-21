@@ -9,9 +9,9 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
     <header className="absolute z-[999] flex w-full border-b border-white-100">
       <div className="w-[23%]">
         <img
-          className="h-auto w-[325px]"
+          className="h-[72px] w-auto"
           src={`${router.basePath}/assets/images/biorev-white-logo.svg`}
-          alt="Nextjs starter banner"
+          alt="Biorev logo"
         />
       </div>
       <nav className="flex w-[71.988%] items-center justify-center">
@@ -20,8 +20,8 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
           {items.map((item, index) => (
             <li
               key={item.id}
-              className={`group relative ${
-                index === 0 ? 'mr-5' : 'mx-5'
+              className={`group relative ${index === 0 ? 'mr-5' : 'mx-5'} ${
+                index === items.length - 1 && 'ml-5 mr-0'
               } flex h-[100%]`}
             >
               {item.isExternal ? (
@@ -29,7 +29,7 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
                   href={item.url}
                   target="_blank"
                   title="Open in a new window"
-                  className={`relative flex h-[100%] items-center overflow-hidden border-none pr-[17px] font-titillium uppercase text-white-0 ${
+                  className={`relative flex h-[100%] items-center overflow-hidden border-none font-titillium uppercase text-white-0 ${
                     item.children &&
                     'after:absolute after:right-[1px] after:top-[50%] after:mt-[-6px] after:font-Flaticon after:text-[8px] after:content-[""]'
                   }`}
@@ -108,7 +108,12 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
         </ul>
         {/* mainmenu ends */}
       </nav>
-      <div className="w-[5%]" />
+      <div className="w-[5%]">
+        <div className="fixed left-0 top-0 h-screen w-screen cursor-close bg-black-overlay" />
+        <div className="relative flex h-[100%] cursor-pointer items-center justify-end px-[25px]">
+          <span className='font-Flaticon text-white-0 after:text-[22px] after:content-["\f105"]' />
+        </div>
+      </div>
     </header>
   );
 };
