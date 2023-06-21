@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         titillium: ['Titillium Web', 'sans-serif'],
         Flaticon: ['Flaticon'],
+        raleway: ['Raleway', 'sans-serif'],
       },
       colors: {
         white: {

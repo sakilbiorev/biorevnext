@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
 import GalleryMenu from '@/components/GalleryMenu';
+import Footer from '@/components/Footer';
 import MainMenu from '@/components/MainMenu';
 import type { MenuItem } from '@/libs/interfaces';
 
@@ -142,19 +143,10 @@ const Main = (props: IMainProps) => (
 
       <div className="mx-auto">
         <main className="content text-xl">{props.children}</main>
-
-        <footer className="border-t border-gray-300 py-8 text-center text-sm">
-          © Copyright {new Date().getFullYear()}. Made by <span>Biorev</span>.
-          {/*
-           * PLEASE READ THIS SECTION
-           * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
-           * The link doesn't need to appear on every pages, one link on one page is enough.
-           * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
-           */}
-        </footer>
       </div>
     </div>
     <GalleryMenu />
+    <Footer />
   </>
 );
 
