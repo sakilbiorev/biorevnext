@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 
 import GalleryMenu from '@/components/GalleryMenu';
-import Footer from '@/components/Footer';
 import MainMenu from '@/components/MainMenu';
+import Footer from '@/layouts/Footer';
 import type { MenuItem } from '@/libs/interfaces';
 
 type IMainProps = {
