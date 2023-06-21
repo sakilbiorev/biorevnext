@@ -109,7 +109,7 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
         {/* mainmenu ends */}
       </nav>
       <div className="w-[5%]">
-        <div className="fixed left-0 top-0 h-screen w-screen cursor-close bg-black-overlay" />
+        <div className="fixed left-0 top-0 hidden h-screen w-screen cursor-close bg-black-overlay" />
         <div className="relative flex h-[100%] cursor-pointer items-center justify-end px-[25px]">
           <span className='font-Flaticon text-white-0 after:text-[22px] after:content-["\f105"]' />
         </div>
