@@ -66,6 +66,9 @@ module.exports = {
           0: '#EA831A',
         },
       },
+      flex: {
+        1: '1 0 33.33%',
+      },
     },
   },
   plugins: [],
