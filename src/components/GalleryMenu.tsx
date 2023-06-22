@@ -89,7 +89,7 @@ const GalleryMenu = ({
               {galleryMenuData.galleryTitle}
             </h2>
           </div>
-          <div className="flex justify-between pb-[30px]">
+          <div className="flex flex-wrap justify-between pb-[30px]">
             {galleryMenuData.galleryImages.map((item) => (
               <div
                 key={item.id}
