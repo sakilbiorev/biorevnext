@@ -3,26 +3,34 @@ import { useRouter } from 'next/router';
 
 import type { MenuItem } from '@/libs/interfaces';
 
-const MainMenu = ({ items }: { items: MenuItem[] }) => {
+const MainMenu = ({
+  items,
+  toggleMenu,
+  isOpen,
+}: {
+  items: MenuItem[];
+  toggleMenu: () => void;
+  isOpen: boolean;
+}) => {
   const router = useRouter();
   return (
-    <header className="absolute z-[999] flex w-full border-b border-white-100">
-      <div className="w-[23%]">
+    <header className="absolute z-[999] flex w-full border-b border-white-100 max-[1150px]:justify-between">
+      <div className="w-[23%] max-xl:w-[350px] max-[1150px]:w-auto">
         <img
           className="h-[72px] w-auto"
           src={`${router.basePath}/assets/images/biorev-white-logo.svg`}
           alt="Biorev logo"
         />
       </div>
-      <nav className="flex w-[71.988%] items-center justify-center">
+      <nav className="flex w-[71.988%] items-center justify-center max-[1150px]:hidden">
         {/* mainmenu starts */}
         <ul className="flex h-[100%] flex-wrap items-center text-sm">
           {items.map((item, index) => (
             <li
               key={item.id}
-              className={`group relative ${index === 0 ? 'mr-5' : 'mx-5'} ${
-                index === items.length - 1 && 'ml-5 mr-0'
-              } flex h-[100%]`}
+              className={`group relative ${
+                index === 0 ? 'mr-5 max-xl:mr-2' : 'mx-5 max-xl:mx-2'
+              } ${index === items.length - 1 && 'ml-5 mr-0'} flex h-[100%]`}
             >
               {item.isExternal ? (
                 <Link
@@ -108,11 +116,22 @@ const MainMenu = ({ items }: { items: MenuItem[] }) => {
         </ul>
         {/* mainmenu ends */}
       </nav>
-      <div className="w-[5%]">
-        <div className="fixed left-0 top-0 hidden h-screen w-screen cursor-close bg-black-overlay" />
-        <div className="relative flex h-[100%] cursor-pointer items-center justify-end px-[25px]">
+      <div className="w-[5%] max-[1150px]:w-auto">
+        <button
+          type="button"
+          onClick={toggleMenu}
+          aria-label="Backdrop"
+          className={`fixed left-0 top-0 h-screen w-screen cursor-close bg-black-overlay ${
+            isOpen ? 'visible z-[9998]' : 'invisible -z-10'
+          }`}
+        />
+        <button
+          type="button"
+          onClick={toggleMenu}
+          className="relative flex h-[100%] cursor-pointer items-center justify-end px-[25px]"
+        >
           <span className='font-Flaticon text-white-0 after:text-[22px] after:content-["\f105"]' />
-        </div>
+        </button>
       </div>
     </header>
   );

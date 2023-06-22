@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode, useState } from 'react';
 
 import Footer from '@/components/Footer';
 import GalleryMenu from '@/components/GalleryMenu';
@@ -135,19 +135,25 @@ const menuData: MenuItem[] = [
   },
 ];
 
-const Main = (props: IMainProps) => (
-  <>
-    <MainMenu items={menuData} />
-    <div className="w-full text-gray-700 antialiased">
-      {props.meta}
+const Main = (props: IMainProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <>
+      <MainMenu items={menuData} toggleMenu={toggleMenu} isOpen={isOpen} />
+      <div className="w-full text-gray-700 antialiased">
+        {props.meta}
 
-      <div className="mx-auto">
-        <main className="content">{props.children}</main>
+        <div className="mx-auto">
+          <main className="content">{props.children}</main>
+        </div>
       </div>
-    </div>
-    <GalleryMenu />
-    <Footer />
-  </>
-);
+      <GalleryMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <Footer />
+    </>
+  );
+};
 
 export { Main };
