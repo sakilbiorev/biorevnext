@@ -2,7 +2,7 @@ import { type ReactNode, useState } from 'react';
 
 import Footer from '@/components/Footer';
 import GalleryMenu from '@/components/GalleryMenu';
-import MainMenu from '@/components/MainMenu';
+import Header from '@/components/Header';
 import type { MenuItem } from '@/libs/interfaces';
 
 type IMainProps = {
@@ -136,13 +136,21 @@ const menuData: MenuItem[] = [
 ];
 
 const Main = (props: IMainProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const [isOpenDesk, setIsOpenDesk] = useState(false);
+  const [isOpenMob, setIsOpenMob] = useState(false);
+  const toggleDeskMenu = () => {
+    setIsOpenDesk(!isOpenDesk);
+  };
+  const toggleMobMenu = () => {
+    setIsOpenDesk(!isOpenDesk);
   };
   return (
     <>
-      <MainMenu items={menuData} toggleMenu={toggleMenu} isOpen={isOpen} />
+      <Header
+        items={menuData}
+        toggleDeskMenu={toggleDeskMenu}
+        isOpenDesk={isOpenDesk}
+      />
       <div className="w-full text-gray-700 antialiased">
         {props.meta}
 
@@ -150,7 +158,7 @@ const Main = (props: IMainProps) => {
           <main className="content">{props.children}</main>
         </div>
       </div>
-      <GalleryMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <GalleryMenu isOpen={isOpenDesk} toggleMenu={toggleDeskMenu} />
       <Footer />
     </>
   );

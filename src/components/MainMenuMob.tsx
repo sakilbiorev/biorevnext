@@ -13,6 +13,7 @@ const MainMenu = ({
   isOpen: boolean;
 }) => {
   const router = useRouter();
+
   return (
     <header className="absolute z-[999] flex w-full border-b border-white-100 max-[1150px]:justify-between">
       <div className="w-[23%] max-xl:w-[350px] max-[1150px]:w-auto">
