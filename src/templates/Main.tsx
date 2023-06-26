@@ -3,6 +3,8 @@ import { type ReactNode, useState } from 'react';
 import Footer from '@/components/Footer';
 import GalleryMenu from '@/components/GalleryMenu';
 import Header from '@/components/Header';
+import MainMenuMob from '@/components/MainMenuMob';
+import useWindowSize from '@/libs/hooks';
 import type { MenuItem } from '@/libs/interfaces';
 
 type IMainProps = {
@@ -136,13 +138,14 @@ const menuData: MenuItem[] = [
 ];
 
 const Main = (props: IMainProps) => {
+  const wSize = useWindowSize();
   const [isOpenDesk, setIsOpenDesk] = useState(false);
   const [isOpenMob, setIsOpenMob] = useState(false);
   const toggleDeskMenu = () => {
     setIsOpenDesk(!isOpenDesk);
   };
   const toggleMobMenu = () => {
-    setIsOpenDesk(!isOpenDesk);
+    setIsOpenMob(!isOpenMob);
   };
   return (
     <>
@@ -150,6 +153,8 @@ const Main = (props: IMainProps) => {
         items={menuData}
         toggleDeskMenu={toggleDeskMenu}
         isOpenDesk={isOpenDesk}
+        toggleMobMenu={toggleMobMenu}
+        isOpenMob={isOpenMob}
       />
       <div className="w-full text-gray-700 antialiased">
         {props.meta}
@@ -158,7 +163,11 @@ const Main = (props: IMainProps) => {
           <main className="content">{props.children}</main>
         </div>
       </div>
-      <GalleryMenu isOpen={isOpenDesk} toggleMenu={toggleDeskMenu} />
+      {wSize.width > 1150 ? (
+        <GalleryMenu isOpen={isOpenDesk} toggleMenu={toggleDeskMenu} />
+      ) : (
+        <MainMenuMob isOpenMob={isOpenMob} toggleMobMenu={toggleMobMenu} />
+      )}
       <Footer />
     </>
   );

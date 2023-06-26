@@ -1,141 +1,40 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-import type { MenuItem } from '@/libs/interfaces';
-
-const MainMenu = ({
-  items,
-  toggleMenu,
-  isOpen,
+const MainMenuMob = ({
+  isOpenMob,
+  toggleMobMenu,
 }: {
-  items: MenuItem[];
-  toggleMenu: () => void;
-  isOpen: boolean;
+  isOpenMob: boolean;
+  toggleMobMenu: () => void;
 }) => {
-  const router = useRouter();
-
   return (
-    <header className="absolute z-[999] flex w-full border-b border-white-100 max-[1150px]:justify-between">
-      <div className="w-[23%] max-xl:w-[350px] max-[1150px]:w-auto">
-        <img
-          className="h-[72px] w-auto"
-          src={`${router.basePath}/assets/images/biorev-white-logo.svg`}
-          alt="Biorev logo"
-        />
+    <div
+      className={`fixed inset-y-0 right-0 z-[999] h-screen w-[400px] ${
+        isOpenMob ? 'translate-x-0' : 'translate-x-full'
+      } overflow-hidden bg-black-0 px-[25px] py-[90px] transition-all duration-300 ease-linear`}
+    >
+      <button
+        type="button"
+        onClick={toggleMobMenu}
+        className="absolute right-0 top-0 z-[9999] block h-[90px] w-[90px] cursor-pointer bg-black-1 text-center text-xl leading-[90px] text-white-0 transition-all duration-300 ease-linear"
+      >
+        <span className='font-Flaticon after:text-[21px] after:leading-[90px] after:text-white-0 after:content-["\f130"]' />
+      </button>
+      <div className="relative px-5">
+        <div className="flex flex-wrap px-[15px]">
+          <div className="mb-10 mt-5">
+            <Link href="/">
+              <img
+                className="h-auto w-[283px]"
+                src="/assets/images/home3-1color-white.png"
+                alt="Biorev logo"
+              />
+            </Link>
+          </div>
+        </div>
       </div>
-      <nav className="flex w-[71.988%] items-center justify-center max-[1150px]:hidden">
-        {/* mainmenu starts */}
-        <ul className="flex h-[100%] flex-wrap items-center text-sm">
-          {items.map((item, index) => (
-            <li
-              key={item.id}
-              className={`group relative ${
-                index === 0 ? 'mr-5 max-xl:mr-2' : 'mx-5 max-xl:mx-2'
-              } ${index === items.length - 1 && 'ml-5 mr-0'} flex h-[100%]`}
-            >
-              {item.isExternal ? (
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  title="Open in a new window"
-                  className={`relative flex h-[100%] items-center overflow-hidden border-none font-titillium uppercase text-white-0 ${
-                    item.children &&
-                    'after:absolute after:right-[1px] after:top-[50%] after:mt-[-6px] after:font-Flaticon after:text-[8px] after:content-[""]'
-                  }`}
-                >
-                  <img
-                    className="h-auto w-6 "
-                    src={`${router.basePath}/assets/images/xseries-icon.png`}
-                    alt="Banner background"
-                  />
-                  <strong className="px-[8px] py-[2px] text-[15px]">
-                    {item.label}
-                  </strong>
-                  <span className="absolute bottom-[-14px] left-[50%] ml-[-5px] h-2 w-2 rotate-45 bg-white-0 opacity-0 transition-all duration-300 ease-linear group-hover:bottom-[-4px] group-hover:opacity-100" />
-                </Link>
-              ) : (
-                <Link
-                  href={item.url}
-                  className={`relative flex h-[100%] items-center overflow-hidden border-none font-titillium uppercase text-white-0 ${
-                    item.children &&
-                    'pr-[17px] after:absolute after:right-[1px] after:top-[50%] after:mt-[-6px] after:font-Flaticon after:text-[8px] after:content-[""]'
-                  }`}
-                >
-                  {item.label}
-                  <span className="absolute bottom-[-14px] left-[50%] ml-[-5px] h-2 w-2 rotate-45 bg-white-0 opacity-0 transition-all duration-300 ease-linear group-hover:bottom-[-4px] group-hover:opacity-100" />
-                </Link>
-              )}
-              {item.children ? (
-                <>
-                  {/* submenu starts */}
-                  <ul className="invisible absolute left-[-34px] top-[100%] z-10 box-border min-w-[290px] translate-y-[30px] bg-black-0 py-5 opacity-0 shadow-mainMenu transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-[10px] group-hover:opacity-100">
-                    {item.children.map((subitem) => (
-                      <li
-                        key={subitem.id}
-                        className="group/item relative px-[34px]"
-                      >
-                        <Link
-                          href={subitem.url}
-                          className={`group/itemLink relative block overflow-hidden border-none py-[5px] font-titillium text-base leading-[30px] text-gray-0 transition-all duration-300 ease-linear hover:pl-10 hover:text-white-0 ${
-                            subitem.children &&
-                            'after:absolute after:right-[1px] after:top-[calc(50%-4.5px)] after:mt-[0px] after:flex after:-rotate-90 after:font-Flaticon after:text-[9px] after:leading-none after:content-[""]'
-                          }`}
-                        >
-                          <span className="invisible absolute left-0 top-[50%] h-[1px] w-0 bg-white-0 opacity-0 transition-all duration-300 ease-linear group-hover/itemLink:visible group-hover/itemLink:left-0 group-hover/itemLink:w-[30px] group-hover/itemLink:opacity-100" />
-                          {subitem.label}
-                        </Link>
-                        {subitem.children && (
-                          <>
-                            {/* submenu starts */}
-                            <ul className="invisible absolute left-[calc(100%+2px)] top-[-30px] z-10 box-border min-w-[290px] translate-y-[30px] whitespace-nowrap bg-black-0 py-5 opacity-0 shadow-mainMenu transition-all duration-300 ease-in-out group-hover/item:visible group-hover/item:translate-y-[10px] group-hover/item:opacity-100">
-                              {subitem.children.map((subitem2) => (
-                                <li
-                                  key={subitem2.id}
-                                  className="group/item1 px-[34px]"
-                                >
-                                  <Link
-                                    href={subitem2.url}
-                                    className="group/item1 relative block overflow-hidden border-none py-[5px] font-titillium text-base leading-[30px] text-gray-0 transition-all duration-300 ease-linear hover:pl-10 hover:text-white-0"
-                                  >
-                                    <span className="invisible absolute left-0 top-[50%] h-[1px] w-0 bg-white-0 opacity-0 transition-all duration-300 ease-linear group-hover/item1:visible group-hover/item1:left-0 group-hover/item1:w-[30px] group-hover/item1:opacity-100" />
-                                    {subitem2.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                            {/* submenu ends */}
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                  {/* submenu ends */}
-                </>
-              ) : null}
-            </li>
-          ))}
-        </ul>
-        {/* mainmenu ends */}
-      </nav>
-      <div className="w-[5%] max-[1150px]:w-auto">
-        <button
-          type="button"
-          onClick={toggleMenu}
-          aria-label="Backdrop"
-          className={`fixed left-0 top-0 h-screen w-screen cursor-close bg-black-overlay ${
-            isOpen ? 'visible z-[9998]' : 'invisible -z-10'
-          }`}
-        />
-        <button
-          type="button"
-          onClick={toggleMenu}
-          className="relative flex h-[100%] cursor-pointer items-center justify-end px-[25px]"
-        >
-          <span className='font-Flaticon text-white-0 after:text-[22px] after:content-["\f105"]' />
-        </button>
-      </div>
-    </header>
+    </div>
   );
 };
 
-export default MainMenu;
+export default MainMenuMob;
