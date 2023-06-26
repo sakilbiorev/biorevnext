@@ -22,7 +22,7 @@ module.exports = {
         mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
       },
       fontFamily: {
-        titillium: ['Titillium Web', 'sans-serif'],
+        titillium: '"Titillium Web", sans-serif',
         Flaticon: ['Flaticon'],
         raleway: ['Raleway', 'sans-serif'],
         josefin: ['Josefin Sans', 'sans-serif'],
@@ -41,6 +41,8 @@ module.exports = {
         },
         gray: {
           0: '#B6B6B6',
+          1: 'rgba(255, 255, 255, 0.4)',
+          2: '#444444',
           100: '#f7fafc',
           200: '#edf2f7',
           300: '#e2e8f0',

@@ -26,6 +26,31 @@ export interface GallryMenuData {
   pinterestLink: string;
 }
 
+export interface TitleAndDescriptionData {
+  TitleItem: SectionTitleData;
+  Description: string;
+}
+
+export interface SectionTitleData {
+  SectionTitle: string;
+  SectionMainTitle: string;
+}
+
 export interface MenuProps {
   items: MenuItem[];
+}
+
+export interface ThreeColumnBoxItem {
+  id: number;
+  Title: string;
+  Icon: string;
+  BgImg: string;
+  Description: string;
+  LinkUrl: string;
+  LinkText: string;
+}
+
+export interface ThreeColumnBoxesProps {
+  TitleItem: SectionTitleData;
+  items: ThreeColumnBoxItem[];
 }
