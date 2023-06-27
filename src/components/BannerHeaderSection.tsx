@@ -5,7 +5,7 @@ import type { TitleAndDescriptionData } from '@/libs/interfaces';
 
 import SectionTitle from './elements/SectionTitle';
 
-const TitleAndDescriptionSection = ({
+const BannerHeaderSection = ({
   titleAndDescriptionData,
 }: {
   titleAndDescriptionData: TitleAndDescriptionData;
@@ -25,4 +25,4 @@ const TitleAndDescriptionSection = ({
   );
 };
 
-export default TitleAndDescriptionSection;
+export default BannerHeaderSection;

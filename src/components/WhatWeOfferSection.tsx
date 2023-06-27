@@ -13,7 +13,10 @@ const WhatWeOfferSection = ({
     <section className="pt-[68px]">
       <div className="mx-auto max-w-[1200px]">
         <div className="w-full">
-          <SectionTitle sectionTitleData={whatWeOfferData.TitleItem} />
+          <SectionTitle
+            sectionTitleData={whatWeOfferData.TitleItem}
+            isWhite={false}
+          />
           <div className="flex flex-wrap justify-center pt-[50px]">
             {whatWeOfferData.items.map((item) => {
               return (

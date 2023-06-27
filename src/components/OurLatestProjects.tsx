@@ -5,6 +5,14 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import HomeLatestProjectData from '@/libs/data/HomeLatestProjectData';
+import type { SectionTitleData } from '@/libs/interfaces';
+
+import SectionTitle from './elements/SectionTitle';
+
+const sectionTitleObj: SectionTitleData = {
+  SectionTitle: '[ OUR PORTFOLIO ]',
+  SectionMainTitle: 'Our Latest Projects',
+};
 
 const OurLatestProjects = () => {
   const LatestImages = HomeLatestProjectData;
@@ -43,17 +51,9 @@ const OurLatestProjects = () => {
     ],
   };
   return (
-    <div className="bg-[url('/images/bg1-home2.jpg')] py-12 text-center">
-      <div className="flex flex-col items-center justify-center">
-        <div className="font-josefin text-[14px] font-bold text-orange-0">
-          [ OUR PORTFOLIO ]
-        </div>
-        <div className="font-titillium text-[40px] font-thin text-[#F3EDED]">
-          Our Latest Projects
-        </div>
-        <hr className="mb-8 w-[66px] border-t-2 border-dotted border-white-0 bg-black-3" />
-      </div>
-      <div className="container px-0 lg:px-24 ">
+    <div className="bg-[url('/images/bg1-home2.jpg')] py-12 text-center ">
+      <SectionTitle sectionTitleData={sectionTitleObj} isWhite />
+      <div className="container px-0 pt-[25px] lg:px-24">
         <Slider {...settings}>
           {LatestImages.map((item) => (
             <div
