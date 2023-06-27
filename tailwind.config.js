@@ -15,6 +15,15 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      keyframes: {
+        stickySlideDown: {
+          '0%': { transform: 'translateY(-100%);' },
+          '100%': { transform: 'translateY(0%);' },
+        },
+      },
+      animation: {
+        slideDown: 'stickySlideDown 0.65s cubic-bezier(0.23, 1, 0.32, 1) both',
+      },
       cursor: {
         close: 'url(/assets/images/close.png) 16 16, default',
       },

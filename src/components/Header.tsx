@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import useWindowSize from '@/libs/hooks';
 import type { MenuItem } from '@/libs/interfaces';
@@ -18,11 +19,32 @@ const Header = ({
   toggleMobMenu: () => void;
   isOpenMob: boolean;
 }) => {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const router = useRouter();
   const wSize = useWindowSize();
 
   return (
-    <header className="absolute z-[999] flex w-full border-b border-white-100 max-[1150px]:justify-between">
+    <header
+      className={`z-[999] flex w-full border-b border-white-100 max-[1150px]:justify-between ${
+        isSticky
+          ? 'fixed left-0 top-0 z-[99] animate-slideDown bg-black-3'
+          : 'absolute'
+      }`}
+    >
       {/** Logo * */}
       <div className="w-[23%] max-xl:w-[350px] max-[1150px]:w-auto">
         <img
