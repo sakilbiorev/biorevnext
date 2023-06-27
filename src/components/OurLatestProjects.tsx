@@ -80,7 +80,7 @@ const OurLatestProjects = () => {
         <div className="font-titillium text-[40px] font-thin text-[#F3EDED]">
           Our Latest Projects
         </div>
-        <hr className="bg-h-black mb-8 w-[66px] border-t-2 border-dotted border-white-0" />
+        <hr className="mb-8 w-[66px] border-t-2 border-dotted border-white-0 bg-black-3" />
       </div>
       <div className="container px-0 lg:px-24 ">
         <Slider {...settings}>
@@ -89,13 +89,7 @@ const OurLatestProjects = () => {
               className="flex items-center justify-center px-2"
               key={item.id}
             >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={500}
-                height={300}
-                className="img"
-              />
+              <Image src={item.src} alt={item.alt} width={500} height={300} />
             </div>
           ))}
         </Slider>
