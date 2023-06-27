@@ -54,3 +54,9 @@ export interface ThreeColumnBoxesProps {
   TitleItem: SectionTitleData;
   items: ThreeColumnBoxItem[];
 }
+
+export interface HomeClientItem {
+  id: number;
+  src: string;
+  alt: string;
+}
