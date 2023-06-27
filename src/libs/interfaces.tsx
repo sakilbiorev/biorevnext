@@ -12,7 +12,7 @@ export interface GallryImageItem {
   imgURL: string;
 }
 
-export interface GallryMenuData {
+export interface GallryMenuItem {
   galleryTitle: string;
   galleryImages: GallryImageItem[];
   contactInfoTitle: string;
