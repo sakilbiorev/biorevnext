@@ -33,7 +33,7 @@ module.exports = {
       fontFamily: {
         titillium: '"Titillium Web", sans-serif',
         Flaticon: ['Flaticon'],
-        raleway: ['Raleway', 'sans-serif'],
+        raleway: '"Raleway", sans-serif',
         josefin: ['Josefin Sans', 'sans-serif'],
       },
       colors: {
@@ -52,6 +52,8 @@ module.exports = {
           0: '#B6B6B6',
           1: 'rgba(255, 255, 255, 0.4)',
           2: '#444444',
+          3: '#ffffff1a',
+          4: '#9397a7',
           100: '#f7fafc',
           200: '#edf2f7',
           300: '#e2e8f0',

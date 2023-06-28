@@ -43,7 +43,11 @@ const Main = (props: IMainProps) => {
       {wSize.width > 1150 ? (
         <GalleryMenu isOpen={isOpenDesk} toggleMenu={toggleDeskMenu} />
       ) : (
-        <MainMenuMob isOpenMob={isOpenMob} toggleMobMenu={toggleMobMenu} />
+        <MainMenuMob
+          isOpenMob={isOpenMob}
+          toggleMobMenu={toggleMobMenu}
+          items={menuData}
+        />
       )}
       <Footer />
     </>
