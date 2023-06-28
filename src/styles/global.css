@@ -20,3 +20,9 @@
   width: 100%;
   height: auto;
 }
+
+.icon-arrow:after {
+  font-family: "Flaticon";
+  content: '\f104';
+  font-size: 10px;
+}
