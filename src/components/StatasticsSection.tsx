@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import CountUp from 'react-countup';
 
-function Stats() {
+function StatasticsSection() {
   const bYear = new Date().getFullYear() - 2010;
   return (
     <div className="grid grid-cols-2 items-center justify-center gap-10 bg-countup px-5 py-[66px] text-center text-[30px] font-[600] md:px-[15%] lg:grid-cols-4 lg:px-[20%]">
@@ -94,4 +94,4 @@ function Stats() {
   );
 }
 
-export default Stats;
+export default StatasticsSection;
