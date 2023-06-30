@@ -27,6 +27,9 @@ module.exports = {
       cursor: {
         close: 'url(/assets/images/close.png) 16 16, default',
       },
+      backgroundPosition: {
+        leftCenter: 'left center',
+      },
       boxShadow: {
         mainMenu: '3px 3px 15px 0 rgba(0, 0, 0, 0.1)',
       },

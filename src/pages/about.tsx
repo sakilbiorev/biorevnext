@@ -1,4 +1,4 @@
-import BannerHeaderSection from '@/components/BannerHeaderSection';
+import HeaderBannerSection from '@/components/HeaderBannerSection';
 import ImageAndTextSection from '@/components/ImageAndTextSection';
 import { Meta } from '@/layouts/Meta';
 import type { HeaderBanner } from '@/libs/interfaces';
@@ -11,7 +11,7 @@ const About = () => {
   };
   return (
     <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
-      <BannerHeaderSection headerBannerData={headerBannerData} />
+      <HeaderBannerSection headerBannerData={headerBannerData} />
       <ImageAndTextSection />
     </Main>
   );
