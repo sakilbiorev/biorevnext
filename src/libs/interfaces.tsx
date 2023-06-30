@@ -60,3 +60,8 @@ export interface HomeClientItem {
   src: string;
   alt: string;
 }
+
+export interface HeaderBanner {
+  title: string;
+  BgImgURL: string;
+}
