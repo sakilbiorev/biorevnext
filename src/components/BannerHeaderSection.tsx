@@ -1,24 +1,28 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import parse from 'html-react-parser';
+import Link from 'next/link';
 
-import type { TitleAndDescriptionData } from '@/libs/interfaces';
-
-import SectionTitle from './elements/SectionTitle';
+import type { HeaderBanner } from '@/libs/interfaces';
 
 const BannerHeaderSection = ({
-  titleAndDescriptionData,
+  headerBannerData,
 }: {
-  titleAndDescriptionData: TitleAndDescriptionData;
+  headerBannerData: HeaderBanner;
 }) => {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 pt-[68px] text-black-0">
-      <div className="mx-auto max-w-[1200px]">
-        <SectionTitle
-          sectionTitleData={titleAndDescriptionData.TitleItem}
-          isWhite={false}
-        />
-        <div className="max-w-[1174px] text-justify font-raleway text-black-2">
-          <p>{parse(titleAndDescriptionData.Description)}</p>
+    <section
+      className="flex h-[500px] flex-col items-center justify-center gap-4 pt-[68px] text-black-0"
+      style={{ backgroundImage: `url('${headerBannerData.BgImgURL}')` }}
+    >
+      <div>
+        <div className="">
+          <h1 className="font-titillium text-[60px] font-light text-white-0">
+            {headerBannerData.title}
+          </h1>
+          <ul className="flex bg-center text-center font-titillium text-sm font-medium text-white-0">
+            <li className="relative ml-[10px] pl-6 font-titillium uppercase">
+              <Link href="/">HOME</Link>
+            </li>
+            <li className="uppercase">3D Rendering Services</li>
+          </ul>
         </div>
       </div>
     </section>
