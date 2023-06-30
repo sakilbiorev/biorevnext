@@ -49,6 +49,7 @@ module.exports = {
           1: '#2f2f2f',
           2: '#555555',
           3: '#1a1a1a',
+          4: '#050505',
           overlay: 'rgba(0, 0, 0, 0.7)',
         },
         gray: {
@@ -84,6 +85,9 @@ module.exports = {
       },
       flex: {
         1: '1 0 33.33%',
+      },
+      backgroundImage: {
+        countup: 'url(/images/about-us/c-up.jpg)',
       },
     },
   },
