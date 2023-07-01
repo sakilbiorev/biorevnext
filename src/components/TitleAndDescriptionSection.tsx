@@ -17,7 +17,7 @@ const TitleAndDescriptionSection = ({
           sectionTitleData={titleAndDescriptionData.TitleItem}
           isWhite={false}
         />
-        <div className="max-w-[1174px] text-justify font-raleway text-black-2">
+        <div className="mt-[50px] max-w-[1174px] text-justify font-raleway text-black-2">
           <p>{parse(titleAndDescriptionData.Description)}</p>
         </div>
       </div>

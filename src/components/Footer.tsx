@@ -142,7 +142,7 @@ function Footer() {
         <div className="mx-auto flex max-w-[1200px] justify-between">
           <div>© {new Date().getFullYear()} Biorev. All Rights Reserved.</div>
           <div>
-            <Link href="https://biorev.com/">
+            <Link href="/">
               <span>Designed &amp; Developed By Biorev</span>
             </Link>
           </div>
