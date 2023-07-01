@@ -45,6 +45,7 @@ export interface ThreeColumnBoxItem {
   Title: string;
   Icon: string;
   BgImg: string;
+  HoverBgImg: string;
   Description: string;
   LinkUrl: string;
   LinkText: string;

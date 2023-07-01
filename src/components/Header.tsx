@@ -59,7 +59,7 @@ const Header = ({
 
       {/** Toggle menu * */}
       {wSize.width > 1150 ? (
-        <div className="w-[5%] max-[1150px]:w-auto">
+        <div className="flex w-[5%] justify-end max-[1150px]:w-auto">
           {/** Backdrop * */}
           <button
             type="button"
@@ -78,7 +78,7 @@ const Header = ({
           </button>
         </div>
       ) : (
-        <div className="w-[5%] max-[1150px]:w-auto">
+        <div className="flex w-[5%] justify-end max-[1150px]:w-auto">
           {/** Backdrop * */}
           <button
             type="button"
