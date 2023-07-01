@@ -53,7 +53,7 @@ const OurLatestProjects = () => {
   return (
     <div className="bg-[url('/images/bg1-home2.jpg')] py-12 text-center ">
       <SectionTitle sectionTitleData={sectionTitleObj} isWhite />
-      <div className="container px-0 pt-[25px] lg:px-24">
+      <div className="mx-auto max-w-[1200px] pt-[25px]">
         <Slider {...settings}>
           {LatestImages.map((item) => (
             <div
