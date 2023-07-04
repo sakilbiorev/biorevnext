@@ -1,5 +1,6 @@
 import HeaderBannerSection from '@/components/HeaderBannerSection';
 import OurSpecializationSection from '@/components/OurSpecializationSection';
+import VisionMissionSection from '@/components/VisionMissionSection';
 import { Meta } from '@/layouts/Meta';
 import type { HeaderBanner } from '@/libs/interfaces';
 import { Main } from '@/templates/Main';
@@ -20,6 +21,7 @@ const company = () => {
     >
       <HeaderBannerSection headerBannerData={headerBannerData} />
       <OurSpecializationSection />
+      <VisionMissionSection />
     </Main>
   );
 };
