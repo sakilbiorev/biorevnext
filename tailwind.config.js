@@ -89,6 +89,7 @@ module.exports = {
       },
       backgroundImage: {
         countup: 'url(/images/about-us/c-up.jpg)',
+        slidePattern: 'url(/images/bg1-studio.jpg)',
       },
     },
   },
