@@ -10,19 +10,19 @@ const MainMenuData: MenuItem[] = [
   {
     id: 2,
     label: 'About us',
-    url: '/about/',
+    url: '/about',
     isExternal: false,
     children: [
       {
         id: 3,
         label: 'Company',
-        url: '',
+        url: '/company',
         isExternal: false,
       },
       {
         id: 4,
         label: 'Our blogs',
-        url: '',
+        url: '/blog',
         isExternal: false,
       },
       {
