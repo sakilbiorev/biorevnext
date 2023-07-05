@@ -1,5 +1,6 @@
 import { type ReactNode, useState } from 'react';
 
+import ScrollToTopButton from '@/components/elements/ScrollToTopButton';
 import Footer from '@/components/Footer';
 import GalleryMenu from '@/components/GalleryMenu';
 import Header from '@/components/Header';
@@ -50,6 +51,7 @@ const Main = (props: IMainProps) => {
         />
       )}
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };
