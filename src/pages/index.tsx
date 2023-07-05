@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 
 import HomeClientsSection from '@/components/HomeClientsSection';
 import OurLatestProjects from '@/components/OurLatestProjects';
+import TestimonialsSliderSection from '@/components/TestimonialsSliderSection';
 import TitleAndDescriptionSection from '@/components/TitleAndDescriptionSection';
 import WhatWeOfferSection from '@/components/WhatWeOfferSection';
 import { Meta } from '@/layouts/Meta';
@@ -126,6 +127,8 @@ const Index = () => {
       <WhatWeOfferSection whatWeOfferData={whatWeOfferData} />
 
       <OurLatestProjects />
+
+      <TestimonialsSliderSection />
 
       <HomeClientsSection />
     </Main>
