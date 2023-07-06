@@ -66,3 +66,11 @@ export interface HeaderBanner {
   title: string;
   BgImgURL: string;
 }
+
+export interface TestimonialsSliderItem {
+  id: number;
+  avatar: string;
+  designation: string;
+  name: string;
+  description: string;
+}
