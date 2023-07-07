@@ -117,6 +117,7 @@ const Index = () => {
     >
       <div>
         <img
+          className="mx-auto"
           src={`${router.basePath}/assets/images/gradient.jpg`}
           alt="Banner"
         />
